@@ -25,13 +25,16 @@ public class AddToCartTest extends BaseTest {
         String email = config.getProperty("email");
         String password = config.getProperty("password");
 
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage(driver, wait);
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver, wait);
         ProductPage productPage = new ProductPage(driver, wait);
-        CartPage cartPage = new CartPage(driver);
+        CartPage cartPage = new CartPage(driver, wait);
 
         loginPage.navigateTo();
         loginPage.login(email, password);
+
+        cartPage.navigateTo();
+        cartPage.clearCart();
 
         searchResultsPage.search("Atomic Habits");
         searchResultsPage.clickFirstResult();
