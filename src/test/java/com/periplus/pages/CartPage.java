@@ -13,6 +13,10 @@ public class CartPage {
         this.driver = driver;
     }
 
+    public void navigateTo() {
+        driver.get("https://www.periplus.com/checkout/cart");
+    }
+
     public Integer getCartBadgeCount() {
         WebElement count = driver.findElement(By.id("cart_total"));
         return Integer.parseInt(count.getText());
