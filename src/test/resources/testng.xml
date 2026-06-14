@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Periplus Cart Test Suite">
+    <test name="Add To Cart Test">
+        <classes>
+            <class name="com.periplus.tests.AddToCartTest"/>
+        </classes>
+    </test>
+</suite>
