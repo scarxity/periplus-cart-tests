@@ -26,8 +26,8 @@ public class AddToCartTest extends BaseTest {
         String password = config.getProperty("password");
 
         LoginPage loginPage = new LoginPage(driver);
-        SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
-        ProductPage productPage = new ProductPage(driver);
+        SearchResultsPage searchResultsPage = new SearchResultsPage(driver, wait);
+        ProductPage productPage = new ProductPage(driver, wait);
         CartPage cartPage = new CartPage(driver);
 
         loginPage.navigateTo();
